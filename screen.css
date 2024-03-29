@@ -68,7 +68,7 @@ h1 {
   padding: 0;
 }
 
-.panel ul input {
+.panel ul li {
   margin: 5px;
   line-height: 24px;
   display: inline-block;
