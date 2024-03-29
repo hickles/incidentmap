@@ -68,10 +68,9 @@ h1 {
   padding: 0;
 }
 
-.panel ul li {
+.panel ul input {
   margin: 5px;
   line-height: 24px;
-
   display: inline-block;
   padding: 5px 10px;
   border-radius: 16px; /* Make the border-radius slightly smaller */
