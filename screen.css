@@ -1,1 +1,152 @@
 /* Add screen styles below */
+:root {
+  --primary-color: #4285f4;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.accordion-toggle {
+  display: none;
+}
+
+.accordion-label {
+  position: relative;
+  display: block;
+  padding: 15px;
+  background-color: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+}
+
+.panel-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 1.2em;
+}
+
+.toggle-icon:before {
+  content: '+';
+}
+
+.accordion-toggle:checked + .accordion-label .toggle-icon:before {
+  content: '-';
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-toggle:checked + .accordion-label + .panel {
+  max-height: 1000px;
+}
+
+.panel-button {
+  display: none;
+}
+
+.accordion-toggle:checked + .accordion-label + .panel .panel-button {
+  display: block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.panel ul li {
+  margin: 5px;
+  line-height: 24px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 16px;
+  background-color: #64b5f6;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+.panel-button {
+  width: 100px;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-group input[type="checkbox"]:checked + label {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group p {
+  margin-top: 5px; 
+}
+
+textarea {
+  margin-bottom: 10px;   
+}
+
+.save-button {
+  width: 100px;
+}
