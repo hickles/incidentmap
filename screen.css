@@ -133,3 +133,18 @@ textarea {
 .save-button {
   width: 100px; 
 }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; 
+  }
