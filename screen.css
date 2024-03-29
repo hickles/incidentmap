@@ -68,7 +68,7 @@ h1 {
   padding: 0;
 }
 
-.panel .checkbox-group {
+.panel .checkbox-group label {
   margin: 5px;
   line-height: 24px;
   display: inline-block;
