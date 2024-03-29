@@ -36,49 +36,41 @@
       <div class="accordion">
         <input type="checkbox" id="panel1" class="accordion-toggle">
         <label for="panel1" class="accordion-label">123 Main Street <span class="panel-toggle-icon">+</span></label>
-        <div class="panel">
-          <ul>
-            <li>
-              <input type="checkbox" id="status1" name="status1">
-              <label for="status1">Status: Stable</label>
-            </li>
-            <li>
-              <input type="checkbox" id="status2" name="status2" checked>
-              <label for="status2">Status: Critical</label>
-            </li>
-            <li>
-              <input type="checkbox" id="damage1" name="damage1">
-              <label for="damage1">Storm Damage: Low</label>
-            </li>
-            <li>
-              <input type="checkbox" id="damage2" name="damage2">
-              <label for="damage2">Storm Damage: Medium</label>
-            </li>
-            <li>
-              <input type="checkbox" id="damage3" name="damage3" checked>
-              <label for="damage3">Storm Damage: High</label>
-            </li>
-            <li>
-              <input type="checkbox" id="structural1" name="structural1">
-              <label for="structural1">Structural Issues: Roof</label>
-            </li>
-            <li>
-              <input type="checkbox" id="structural2" name="structural2" checked>
-              <label for="structural2">Structural Issues: Basement</label>
-            </li>
-            <li>
-              <input type="checkbox" id="structural3" name="structural3">
-              <label for="structural3">Structural Issues: Window and Door</label>
-            </li>
-            <li>
-              <input type="checkbox" id="structural4" name="structural4">
-              <label for="structural4">Structural Issues: Foundation</label>
-            </li>
-            <li>
-              <input type="checkbox" id="structural5" name="structural5">
-              <label for="structural5">Structural Issues: Other</label>
-            </li>
-          </ul>
+    <div class="panel">
+  <ul>
+    <div class="form-group">
+      <label>Status:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="option1" name="option1">
+        <label for="option1">Stable</label>
+        <input type="checkbox" id="option2" name="option2" checked>
+        <label for="option2">Critical</label>
+      </div>
+      <label>Storm Damage:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="option3" name="option3">
+        <label for="option3">Low</label>
+        <input type="checkbox" id="option4" name="option4">
+        <label for="option4">Medium</label>
+        <input type="checkbox" id="option5" name="option5" checked>
+        <label for="option5">High</label>
+      </div>
+      <label>Structural Issues:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="option6" name="option6">
+        <label for="option6">Roof</label>
+        <input type="checkbox" id="option7" name="option7" checked>
+        <label for="option7">Basement</label>
+        <input type="checkbox" id="option8" name="option8">
+        <label for="option8">Window and Door</label>
+        <input type="checkbox" id="option9" name="option9">
+        <label for="option9">Foundation</label>
+        <input type="checkbox" id="option10" name="option10">
+        <label for="option10">Other</label>
+      </div>
+    </div>
+  </ul>
+</div>
           <div class="form-group">
             <label for="message">Notes:</label>
             <p>Residents called at 11:50pm needing urgent help. <i>---11:00pm</i></p>
