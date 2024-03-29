@@ -1,93 +1,123 @@
 /* Add screen styles below */
-/* Define primary color */
 :root {
-  --primary-color: #4285f4;
+  --primary-color: #4285f4; 
 }
 
-/* Apply primary color to header */
 header {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+  background-color: var(--primary-color); 
+  color: #fff; 
+  padding: 20px; 
+  text-align: center; 
 }
 
-/* Container for main content */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
 }
 
-/* Styles for main heading */
 h1 {
-  color: #fff;
-  font-size: 24px;
-  margin-bottom: 20px;
+  color: #fff; 
+  font-size: 24px; 
+  margin-bottom: 20px; 
 }
 
-/* Accordion styles */
 .accordion-toggle {
-  display: none;
+  display: none; 
 }
 
-/* Styles for accordion label */
 .accordion-label {
   position: relative;
-  display: block;
-  padding: 15px;
-  background-color: #f7f7f7;
-  color: #333;
-  cursor: pointer;
+  display: block; 
+  padding: 15px; 
+  background-color: #f7f7f7; 
+  cursor: pointer; 
 }
 
-/* Icon for accordion toggle */
 .panel-toggle-icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  color: #333;
-  font-size: 1.2em;
+  position: absolute; 
+  top: 50%; 
+  right: 15px; 
+  transform: translateY(-50%); 
+  font-size: 1.2em; 
 }
 
-/* Plus icon for closed accordion */
-.toggle-icon:before {
-  content: '+';
-}
-
-/* Minus icon for opened accordion */
-.accordion-toggle:checked + .accordion-label .toggle-icon:before {
-  content: '-';
-}
-
-/* Panel styles */
 .panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  max-height: 0; 
+  overflow: hidden; 
 }
 
-/* Show panel when accordion is checked */
 .accordion-toggle:checked + .accordion-label + .panel {
-  max-height: 1000px;
+  max-height: 1000px; 
 }
 
-/* Button styles */
 .panel-button {
-  display: none;
+  display: none; 
 }
 
-/* Show button when accordion is checked */
 .accordion-toggle:checked + .accordion-label + .panel .panel-button {
-  display: block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  display: block; 
+  padding: 10px 20px; 
+  background-color: var(--primary-color); 
+  color: #fff; 
+  border: none; 
+  border-radius: 4px; 
+}
+  .panel ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .panel ul li {
+    margin: 5px;
+    line-height: 24px;
+  }
+
+.status-pill {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 16px; /* Make the border-radius slightly smaller */
+  background-color: #64b5f6; /* Lighter blue color */
+  color: #fff; /* White text color */
+  font-weight: bold; /* Bold font weight */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 1px; /* Add a little letter-spacing */
+  font-size: 12px; /* Adjust font size */
+  margin-left: 12px;
+}
+
+.panel-button {
+  width: 100px;
+  border: none; /* Remove border */
+  border-radius: 16px; /* Make the button pill-shaped */
+  padding: 5px 10px; /* Add padding */
+  margin-right: 10px; /* Add margin between buttons */
+  margin-bottom: 16px;
+  cursor: pointer; /* Set cursor to pointer */
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+
+.checkbox-group input[type="checkbox"] {
+  display: none; 
+}
+
+.checkbox-group input[type="checkbox"]:checked + label {
+  background-color: #4285f4;
+  color: #ffffff;
 }
 
 .form-group {
@@ -104,20 +134,5 @@ textarea {
 }
 
 .save-button {
-  width: 100px;
-}
-
-.cta-button {
-  width: 100px;
-  border: none;
-  border-radius: 16px;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-
-
-.save-button {
-  width: 100px;
+  width: 100px; 
 }
