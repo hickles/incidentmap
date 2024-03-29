@@ -88,9 +88,8 @@ h1 {
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: #f0f0f0;
-  padding: 5px 10px;
+  padding: 5px 20px;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -109,6 +108,10 @@ h1 {
 
 .form-group p {
   margin-top: 5px; 
+}
+
+.form-group label[for="message"]{
+  color: black;
 }
 
 textarea {
