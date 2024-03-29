@@ -1,8 +1,10 @@
 /* Add screen styles below */
+/* Define primary color */
 :root {
   --primary-color: #4285f4;
 }
 
+/* Apply primary color to header */
 header {
   background-color: var(--primary-color);
   color: #fff;
@@ -10,22 +12,26 @@ header {
   text-align: center;
 }
 
+/* Container for main content */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Styles for main heading */
 h1 {
   color: #fff;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
+/* Accordion styles */
 .accordion-toggle {
   display: none;
 }
 
+/* Styles for accordion label */
 .accordion-label {
   position: relative;
   display: block;
@@ -35,6 +41,7 @@ h1 {
   cursor: pointer;
 }
 
+/* Icon for accordion toggle */
 .panel-toggle-icon {
   position: absolute;
   top: 50%;
@@ -44,28 +51,34 @@ h1 {
   font-size: 1.2em;
 }
 
+/* Plus icon for closed accordion */
 .toggle-icon:before {
   content: '+';
 }
 
+/* Minus icon for opened accordion */
 .accordion-toggle:checked + .accordion-label .toggle-icon:before {
   content: '-';
 }
 
+/* Panel styles */
 .panel {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
 
+/* Show panel when accordion is checked */
 .accordion-toggle:checked + .accordion-label + .panel {
   max-height: 1000px;
 }
 
+/* Button styles */
 .panel-button {
   display: none;
 }
 
+/* Show button when accordion is checked */
 .accordion-toggle:checked + .accordion-label + .panel .panel-button {
   display: block;
   padding: 10px 20px;
@@ -75,63 +88,6 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.panel ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.panel ul li {
-  margin: 5px;
-  line-height: 24px;
-}
-
-.status-pill {
-  display: inline-block;
-  padding: 5px 10px;
-  border-radius: 16px;
-  background-color: #64b5f6;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  margin-left: 12px;
-}
-
-.panel-button {
-  width: 100px;
-  border: none;
-  border-radius: 16px;
-  padding: 5px 10px;
-  margin-right: 10px;
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.checkbox-group label {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  background-color: #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.checkbox-group input[type="checkbox"] {
-  display: none;
-}
-
-.checkbox-group input[type="checkbox"]:checked + label {
-  background-color: #4285f4;
-  color: #ffffff;
 }
 
 .form-group {
@@ -146,6 +102,21 @@ h1 {
 textarea {
   margin-bottom: 10px;   
 }
+
+.save-button {
+  width: 100px;
+}
+
+.cta-button {
+  width: 100px;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
 
 .save-button {
   width: 100px;
