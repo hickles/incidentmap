@@ -4,6 +4,6 @@ h1 {
 }
 
 .map-container {
-  item-align: center;
+  align-items: center;
   margin-top: 24px;
 }
