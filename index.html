@@ -4,89 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Storm Response Dashboard</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
+  <title>Storm Response Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
 <body>
-
-<div class="container">
-  <header>  
-    <h1>Storm Response Dashboard</h1>  
-  </header>
-
-  <main>  
-    <section class="storm-info">  
-      <h2>Storm Information</h2>  
-      <div class="storm-details">  
-        <p><strong>Intensity:</strong> High</p>  
-        <p><strong>Duration:</strong> 3 hours</p>  
-        <p><strong>Movement:</strong> Northeast</p>  
-      </div>  
-    </section> 
-
-      <section class="map-container">  
+  <div class="container">
+    <header>  
+      <h1>Storm Response Dashboard</h1>  
+    </header>
+    <main>  
+      <section class="storm-info">  
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Urgent Weather Update!</strong> Severe thunderstorms expected with high winds and hail. Take cover in sturdy shelter.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <h2>Properties <span class="badge rounded-pill text-bg-danger" style="font-size: 12px;">New</span></h2>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                123 Main Street       
+                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <h6>Status:</h6>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Critical</label>
+                </div>
+                <h6>Storm Damage:</h6>
+                <select class="form-select form-select-sm" aria-label="Small select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">Low</option>
+                  <option value="2">Medium</option>
+                  <option value="3">High</option>
+                </select>
+                <h6>Structural Issues:</h6> 
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Roof</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Basement</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Window/Door</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Foundation</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                  <label class="form-check-label" for="inlineCheckbox3">Other</label>
+                </div> 
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Add notes" aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Save</button>
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-primary" type="button">Save Updates</button>
+                  <button id="scrollToMap" type="button" class="btn btn-primary position-relative" onclick="scrollToMap()">Go to Property</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <section class="map-container" id="map-container">  
         <div class="map">
           <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-82.9565,42.5410,-82.9223,42.5654&amp;layer=mapnik" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-      </section> 
-
-    <section class="property-list">  
-      <h2>Prioritized Property List</h2>  
-
-      <div class="accordion">
-        <input type="checkbox" id="panel1" class="accordion-toggle">
-        <label for="panel1" class="accordion-label">123 Main Street <span class="panel-toggle-icon">+</span></label>
-    <div class="panel">
-  <ul>
-    <div class="form-group">
-      <label>Status:</label>
-      <div class="checkbox-group">
-        <input type="checkbox" id="option1" name="option1">
-        <label for="option1">Stable</label>
-        <input type="checkbox" id="option2" name="option2" checked>
-        <label for="option2">Critical</label>
-      </div>
-      <label>Storm Damage:</label>
-      <div class="checkbox-group">
-        <input type="checkbox" id="option3" name="option3">
-        <label for="option3">Low</label>
-        <input type="checkbox" id="option4" name="option4">
-        <label for="option4">Medium</label>
-        <input type="checkbox" id="option5" name="option5" checked>
-        <label for="option5">High</label>
-      </div>
-      <label>Structural Issues:</label>
-      <div class="checkbox-group">
-        <input type="checkbox" id="option6" name="option6">
-        <label for="option6">Roof</label>
-        <input type="checkbox" id="option7" name="option7" checked>
-        <label for="option7">Basement</label>
-        <input type="checkbox" id="option8" name="option8">
-        <label for="option8">Window and Door</label>
-        <input type="checkbox" id="option9" name="option9">
-        <label for="option9">Foundation</label>
-        <input type="checkbox" id="option10" name="option10">
-        <label for="option10">Other</label>
-      </div>
-      <div class="form-group">
-        <label for="message">Notes:</label>
-        <p>Residents called at 11:50pm needing urgent help. <i>---11:00pm</i></p>
-        <textarea rows="4"></textarea>
-        <button type="submit" class="save-button">Save</button>
-      </ul>
-          <button class="panel-button cta-button">Go</button>
-      </div>
-    </div>
-      <div class="accordion">
-        <input type="checkbox" id="panel2" class="accordion-toggle">
-        <label for="panel2" class="accordion-label">125 Main Street <span class="panel-toggle-icon">+</span></label>
-        <div class="panel">
-          <!-- Panel content for 137 Main Street -->
-        </div>
-      </div> 
-    </section>  
-  </main>  
-</div>  
-
+      </section>
+    </main>
+  </div>
+  <script>
+    function scrollToMap() {
+      var mapSection = document.getElementById('map-container');
+      mapSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
