@@ -3,6 +3,18 @@ h1 {
   text-align: center; 
 }
 
+.card-info {
+  margin-bottom: 10px;
+}
+
+.card-info h6 {
+  margin-bottom: 5px; 
+}
+
+.card-info .form-check-inline {
+  margin-right: 10px; 
+}
+
 .map-container {
   text-align: center;
   margin-top: 24px;
