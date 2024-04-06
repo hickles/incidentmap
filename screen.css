@@ -4,7 +4,16 @@ h1 {
 }
 
 .card-info {
-  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.card-info h6 {
+  margin-bottom: 5px;
+}
+
+.card-info select,
+.card-info .form-check-inline {
+  margin-bottom: 5px;
 }
 
 .map-container {
