@@ -1,6 +1,7 @@
 /* Add screen styles below */
 h1 {
   text-align: center; 
+  margin-top: 24px;
 }
 
 .accordion-body h6 {
